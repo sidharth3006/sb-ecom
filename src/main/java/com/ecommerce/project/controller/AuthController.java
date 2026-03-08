@@ -145,10 +145,7 @@ public class AuthController {
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
         UserInfoResponse response = new UserInfoResponse(userDetails.getId(),roles,userDetails.getUsername());
-
-
-
-         return ResponseEntity.ok().body(response);
+        return ResponseEntity.ok().body(response);
     }
 
     @PostMapping("/signout")
