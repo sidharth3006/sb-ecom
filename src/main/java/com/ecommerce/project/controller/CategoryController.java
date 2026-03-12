@@ -29,8 +29,8 @@ public class CategoryController {
     }
     @PostMapping("/public/categories")
     public ResponseEntity<CategoryDTO> createCategory(@Valid @RequestBody CategoryDTO categoryDTO){
-        CategoryDTO savedCateogryDTO = categoryService.createCategory(categoryDTO);
-        return new ResponseEntity<>(savedCateogryDTO,HttpStatus.OK);
+        CategoryDTO savedCategoryDTO = categoryService.createCategory(categoryDTO);
+        return new ResponseEntity<>(savedCategoryDTO,HttpStatus.OK);
     }
     @DeleteMapping("/admin/categories/{categoryId}")
     public ResponseEntity<CategoryDTO> deleteCategory(@PathVariable Long categoryId){
